@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Template</title>
+    <script>src="https://code.jquery.com/jquery-3.3.1.js"</script>
+    <script>
+    $(function(){
+        $('').click(function(){
+          
+        })
+    });
+    </script>
+  <style>
+    header {
+      font-size:48px;
+      text-align:center;
+      background-color:white;
+    }
+    #card {
+      width:300px;
+      height:200px;
+      background-color:white;
+      margin:auto;
+      margin-top:10px;
+      margin-bottom:10px;
+      
+    }
+    span {
+      margin-top:10px;
+      margin-bottom:10px;
+      display:inline-block;
+    }
+    .hunter, .ccny {
+      width:100px;
+      height:100px;
+      display:inline-block;
+    }
+  </style>
+  </head>
+  <body>
+    <div style='background-color:lightblue;' class='container' id='wrapper'>
+      <header>College Information Cards</header>
+    <h4>Make your own college info cards online</h4>
+    Name: <input type='text' id='name' placeholder='first last' required><br>
+    College Name: <input type='text' id='cn' placeholder='full name' required><br>
+    Occupation: <input type='text' id='occupation' required><br>
+    Student ID Number: <input type='text' id= 'num' required><br>
+    College's Website: <input type='text' id='web' placeholder='copy/paste' required><br>
+    Favorite Color: <input type='text' id='color' placeholder='light colors plz' required><br>
+    College Image:<input type='radio' value=''>
+    <div class='hunter'>
+      <img src='generator-project/hunter.jpg'>
+    </div>
+    <div class='ccny'>
+      <img src='generator-project/city-college-of-ny.jpg'>
+    </div>
+    <div id='card'>
+      
+    </div>
+    <span>
+      Width: <input type='text' id='width'><br>
+      Height: <input type='text' id='height' placeholder=''><br>
+      
+    </span>
+    </div>
+  </body>
+</html>
