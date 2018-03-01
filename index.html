@@ -1,53 +1,170 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script>src="https://code.jquery.com/jquery-3.3.1.js"</script>
-    <script>
-    $(function(){
-        $('ul.tabs li').click(function(){
-          
-        });
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <script>
+    src = "https://code.jquery.com/jquery-3.3.1.js"
+  </script>
+  <script>
+    $(function() {
+      $('submit').click(function(){
+        var name = $('#name').val()
+        console.log(name)
+        var occupation = $('#occupation').val()
+        console.log(occupation)
+        var idnum = $('#idnum').val()
+        console.log(idnum)
+        var web = $('#web').val()
+        console.log(web)
+        //$('name').html('#name')
+        //$('occupation').html('#occupation')
+        //$('idnum').html('#idnum')
+        //$('web').html('#web')
+        $("input[name='college']:checked").val(function(){
+          $("input[name='college']:checked").html('#college')
+          $("input[name='college']:checked").width(600)
+          $("input[name='college']:checked").height(100)
+        })
+      })
     });
-    </script>
-  </head>
-  <body>
-    <div class='container' id='wrapper'>
-      <header>College Information Cards</header>
-    <h4>Make your own college info cards online</h4>
-    Name: <input type='text' id='name' placeholder='first last' required><br>
-    College Name: <input type='text' id='cn' placeholder='full name' required><br>
-    Occupation: <input type='text' id='occupation' required><br>
-    Student ID Number: <input type='text' id= 'num' required><br>
-    College's Website: <input type='text' id='web' placeholder='copy/paste' required><br>
-    Favorite Color: <input type='text' id='color' placeholder='light colors plz' required><br>
+  </script>
+  <style>
+    .container {
+      background-color: lavender;
+    }
+
+    header {
+      font-size: 48px;
+      text-align: center;
+      background-color: white;
+    }
+    #college {
+      width:600px;
+      height:100px;
+      background-color:lightblue;
+    }
+    #name {
+      width:200px;
+      height:50px;
+    }
+    #occupation {
+      width:200px;
+      height:50px;
+    }
+    #idnum {
+      width:250px;
+      height:50px;
+    }
+    #web {
+      width:200px;
+      height:100px;
+      color:black;
+    }
+    #card {
+      width: 600px;
+      height: 400px;
+      background-color: white;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    img {
+      width:100px;
+      height:100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='container'>
+    <header> CUNY College Identification Cards</header>
+    <h4>Make your own college identification cards online</h4>
+    Name: <input type='text' placeholder='first last' required><br> 
+    Occupation: <input type='text' required><br> 
+    Student ID Number: <input type='text' required><br> 
+    College's Website: <input type='text' placeholder='copy/paste' required><br> 
+    Favorite Color: <input type='text' placeholder='light colors plz' required><br> 
     College Image:<br>
+    <input type='submit'>
     <div id='tabs'>
       <ul>
-        <li><a href=''>CUNY</a></li>
-        <li><a href=''>SUNY</a></li>
-        <li><a href=''>Community</a></li>
-        <li><a href=''>Private</a></li>
+        <li><a href='#tab-1'>CUNY</a></li>
+        <div id='tab-1'>
+          <input type='radio' name='college' class='hunter'>
+            <label for='Hunter College'><img src='images/hunter.jpg'></label>
+          <input type='radio' name='college' class='bmcc'>
+            <label for='BMCC'><img src='images/bmcc.png'></label>
+          <input type='radio' name='college' class='john-jay'>
+            <label for='John Jay College'><img src='images/john-jay.jpg'></label>
+          <input type='radio' name='college' class='ccny'>
+            <label for='CCNY'><img src='images/ccny-logo.png'></label>
+          <input type='radio' name='college' class='lehman'>
+            <label for='Lehman College'><img src='images/lehman.jpg'></label>
+          <input type='radio' name='college' class='staten-island'>
+            <label for='College of Staten Island'><img src='images/staten-island.png'></label>
+          <input type='radio' name='college' class='city-tech'>
+            <label for='City Tech'><img src='images/city-tech.jpg'></label>
+          <input type='radio' name='college' class='brooklyn-college'>
+            <label for='Brooklyn College'><img src='images/brooklyn-college.png'></label>
+          <input type='radio' name='college' class='kingsborough'>
+            <label for='Kingsborough'><img src='images/kcc-logo.png'></label>
+          <input type='radio' name='college' class='laguardia'>
+            <label for='Laguardia College'><img src='images/laguardia-college.gif'></label>
+          <input type='radio' name='college' class='queens'>
+            <label for='Queens College'><img src='images/queens-college.jpg'></label>
+          <input type='radio' name='college' class='queenborough'>
+            <label for='Queenborough College'><img src='images/queenborough.jpg'></label>
+          <input type='radio' name='college' class='bronx'>
+            <label for='Bronx College'><img src='images/bronx-college.jpg'></label>
+          <input type='radio' name='college' class='york'>
+            <label for='York College'><img src='images/york-college.gif'></label>
+          <input type='radio' name='college' class='guttman'>
+            <label for= 'Guttman College'><img src='images/guttman.gif'></label>
+          <input type='radio' name='college' class='hostos'>
+            <label for='Hostos College'><img src='images/hostos-college.png'></label>
+          <input type='radio' name='college' class='medgar-evers'>
+            <label for='Medgar Evers College'><img src='images/medgar-evers.jpg'></label>
+          <input type='radio' name='college' class='baruch'>
+            <label for='Baruch College'><img src='images/baruch-logo.jpg'></label>
+          <input type='radio' name='college' class='cuny-graduate-center'>
+            <label for='CUNY Graduate Center'><img src='images/cuny-graduate.jpg'></label>
+          <input type='radio' name='college' class='cuny-law'>
+            <label for='CUNY school of law'><img src='images/cuny-law.jpg'></label>
+          <input type='radio' name='college' class='cuny-journalism'>
+            <label for='CUNY of Jounalism'><img src='images/cuny-journalism.png'></label>
+          <input type='radio' name='college' class='cuny-health'>
+            <label for='CUNY of public health'><img src='images/cuny-health.png'></label>
+          <input type='radio' name='college' class='macaulay-college'>
+            <label for='Macaulay Honors'><img src='images/mhc-logo.jpg'></label>
+          <input type='radio' name='college' class='cuny-professional'>
+            <label for='CUNY of Professional Studies'><img src='images/cuny-pro.jpg'></label>
+        </div>
       </ul>
     </div>
-    <input type='radio' name='college' class='hunter' value='generator-project/hunter.jpg'>
-    <input type='radio' name='college' class='' value=''>
-    <input type='radio' name='college' class='' value=''>
-    <input type='radio' name='college' class='' value=''>
-    <input type='radio' name='college' class='' value=''>
-    <input type='radio' name='college' class='' value=''>
-    <input type='radio' name='college' class='' value=''>
-    <input type='radio' name='college' class='' value=''>
-    
+
     <div id='card'>
-      
+      <div id='college'>
+        
+      </div>
+      <div id='name'>
+        Name: 
+      </div>
+      <div id='occupation'>
+        Occupation: 
+      </div>
+      <div id='idnum'>
+        ID Number: 
+      </div>
+      <div id='web'>
+        
+      </div>
+      <div id='color'>
+        
+      </div>
     </div>
-    <span>
-      Width: <input type='text' id='width'><br>
-      Height: <input type='text' id='height' placeholder=''><br>
-      
-    </span>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
