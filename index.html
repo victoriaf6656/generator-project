@@ -18,14 +18,14 @@
         console.log(idnum)
         var web = $('#web').val()
         console.log(web)
-        //$('name').html('#name')
-        //$('occupation').html('#occupation')
-        //$('idnum').html('#idnum')
-        //$('web').html('#web')
-        $("input[name='college']:checked").val(function(){
-          $("input[name='college']:checked").html('#college')
-          $("input[name='college']:checked").width(600)
-          $("input[name='college']:checked").height(100)
+        $('name').html('#name')
+        $('occupation').html('#occupation')
+        $('idnum').html('#idnum')
+        $('web').html('#web')
+        $("input[name ='college']:checked").val(function(){
+          $("input[name ='college']:checked").appendTo('#college')
+          $("input[name ='college']:checked").width(600)
+          $("input[name ='college']:checked").height(100)
         })
       })
     });
@@ -87,7 +87,6 @@
     College's Website: <input type='text' placeholder='copy/paste' required><br> 
     Favorite Color: <input type='text' placeholder='light colors plz' required><br> 
     College Image:<br>
-    <input type='submit'>
     <div id='tabs'>
       <ul>
         <li><a href='#tab-1'>CUNY</a></li>
@@ -143,7 +142,7 @@
         </div>
       </ul>
     </div>
-
+    <input type='submit'>
     <div id='card'>
       <div id='college'>
         
