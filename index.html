@@ -10,17 +10,17 @@
   <script>
     $(function() {
       $('submit').click(function(){
-        var name = $('#name').val()
-        console.log(name)
-        var occupation = $('#occupation').val()
-        console.log(occupation)
-        var idnum = $('#idnum').val()
-        console.log(idnum)
+        var name = $('#name').val();
+        console.log(name);
+        var occupation = $('#occupation').val();
+        console.log(occupation);
+        var idnum = $('#idnum').val();
+        console.log(idnum);
         var web = $('#web').val()
         console.log(web)
-        $('name').html('#name')
-        $('occupation').html('#occupation')
-        $('idnum').html('#idnum')
+        $('name').html('h4');
+        $('occupation').html('h2')
+        $('idnum').html('h3')
         $('web').html('#web')
         $("input[name ='college']:checked").val(function(){
           $("input[name ='college']:checked").appendTo('#college')
@@ -30,57 +30,85 @@
       })
     });
   </script>
-  <style>
-    .container {
-      background-color: lavender;
-    }
+<style>
+  .container {
+    background-color: lavender;
+  }
 
-    header {
-      font-size: 48px;
-      text-align: center;
-      background-color: white;
-    }
-    #college {
-      width:600px;
-      height:100px;
-      background-color:lightblue;
-    }
-    #name {
-      width:200px;
-      height:50px;
-    }
-    #occupation {
-      width:200px;
-      height:50px;
-    }
-    #idnum {
-      width:250px;
-      height:50px;
-    }
-    #web {
-      width:200px;
-      height:100px;
-      color:black;
-    }
-    #card {
-      width: 600px;
-      height: 400px;
-      background-color: white;
-      margin: auto;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    img {
-      width:100px;
-      height:100px;
-    }
-  </style>
+  header {
+    font-size: 48px;
+    text-align: center;
+    background-color: white;
+  }
+
+  #college {
+    width: 600px;
+    height: 100px;
+    background-color: lightblue;
+  }
+
+  #name {
+    width: 50px;
+    height: 50px;
+
+  }
+
+  text {
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  #occupation {
+    width: 100px;
+    height: 50px;
+  }
+
+  h2 {
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  #idnum {
+    width: 150px;
+    height: 50px;
+  }
+
+  h3 {
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  #web {
+    width: 200px;
+    height: 100px;
+    color: black;
+  }
+
+  #card {
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+</style>
 </head>
 
 <body>
   <div class='container'>
     <header> CUNY College Identification Cards</header>
-    <h4>Make your own college identification cards online</h4>
     Name: <input type='text' placeholder='first last' required><br> 
     Occupation: <input type='text' required><br> 
     Student ID Number: <input type='text' required><br> 
@@ -148,13 +176,13 @@
         
       </div>
       <div id='name'>
-        Name: 
+        Name: <input type='text'>
       </div>
       <div id='occupation'>
-        Occupation: 
+        Occupation: <h2></h2>
       </div>
       <div id='idnum'>
-        ID Number: 
+        ID Number: <h3></h3>
       </div>
       <div id='web'>
         
