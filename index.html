@@ -3,33 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>jQuery Template</title>
-  <script>
-    src = "https://code.jquery.com/jquery-3.3.1.js"
-  </script>
-  <script>
-    $(function() {
-      $('submit').click(function(){
-        var name = $('#name').val();
-        console.log(name);
-        var occupation = $('#occupation').val();
-        console.log(occupation);
-        var idnum = $('#idnum').val();
-        console.log(idnum);
-        var web = $('#web').val()
-        console.log(web)
-        $('name').html('h4');
-        $('occupation').html('h2')
-        $('idnum').html('h3')
-        $('web').html('#web')
-        $("input[name ='college']:checked").val(function(){
-          $("input[name ='college']:checked").appendTo('#college')
-          $("input[name ='college']:checked").width(600)
-          $("input[name ='college']:checked").height(100)
-        })
-      })
-    });
-  </script>
+  <title>jQuery Generator Project</title>
+  <script>src = "https://code.jquery.com/jquery-3.3.1.js"</script>
 <style>
   .container {
     background-color: lavender;
@@ -42,154 +17,147 @@
   }
 
   #college {
-    width: 600px;
+    width: 400px;
     height: 100px;
     background-color: lightblue;
   }
 
-  #name {
-    width: 50px;
+  p {
+    width: 200px;
     height: 50px;
-
-  }
-
-  text {
-    width: 100px;
-    height: 50px;
-    display: inline-block;
-    text-align: right;
-  }
-
-  #occupation {
-    width: 100px;
-    height: 50px;
+    font-size:24px;
   }
 
   h2 {
-    width: 100px;
-    height: 50px;
-    display: inline-block;
-    text-align: right;
-  }
-
-  #idnum {
-    width: 150px;
+    width: 200px;
     height: 50px;
   }
 
   h3 {
-    width: 100px;
-    height: 50px;
-    display: inline-block;
-    text-align: right;
-  }
-
-  #web {
     width: 200px;
-    height: 100px;
-    color: black;
+    height: 50px;
   }
 
   #card {
-    width: 600px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     background-color: white;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    border:solid 2px slateblue;
   }
 
-  img {
+  /*CUNY Images*/
+  .hunter, .bmcc, .john-jay, .ccny, .lehman, .staten-island, .city-tech, .brooklyn-college, .kingsborough {
+    width: 100px;
+    height: 100px;
+  }
+ .laguardia, .queens, .queenborough, .bronx, .york, .guttman, .hostos, .medgar-evers, .baruch {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cuny-graduate-center, .cuny-law, .cuny-journalism, .cuny-health, .macaulay-college, .cuny-professional {
     width: 100px;
     height: 100px;
   }
 </style>
+  <script>
+    $(function() {
+      $('button').click(function(){
+        var name = $('#name').val();
+        console.log(name);
+        var occupation = $('#occupation').val();
+        console.log(occupation);
+        var idnum = $('#idnum').val();
+        console.log(idnum);
+        var color = $('#color').val();
+        console.log(color);
+        var Username = "Name: " + name;
+        var Useroccupation = "Occupation: " + occupation;
+        var Useridnum = "ID Number: " + idnum;
+        $('p').html(Username);
+        $('h2').html(Useroccupation).val(function(){
+          $('h2').css('color', color).val(Useroccupation);
+        })
+        $('h3').html(Useridnum);
+        $("input[name='college']:checked")
+      });
+    });
+  </script>
 </head>
 
 <body>
   <div class='container'>
     <header> CUNY College Identification Cards</header>
-    Name: <input type='text' placeholder='first last' required><br> 
-    Occupation: <input type='text' required><br> 
-    Student ID Number: <input type='text' required><br> 
-    College's Website: <input type='text' placeholder='copy/paste' required><br> 
-    Favorite Color: <input type='text' placeholder='light colors plz' required><br> 
+    Name: <input placeholder='first last' id='name' required><br> 
+    Occupation: <input id='occupation' required><br>
+    Student ID Number: <input id='idnum' required><br>
+    Favorite Color: <input id='color' required><br> 
     College Image:<br>
     <div id='tabs'>
       <ul>
-        <li><a href='#tab-1'>CUNY</a></li>
         <div id='tab-1'>
-          <input type='radio' name='college' class='hunter'>
-            <label for='Hunter College'><img src='images/hunter.jpg'></label>
-          <input type='radio' name='college' class='bmcc'>
-            <label for='BMCC'><img src='images/bmcc.png'></label>
-          <input type='radio' name='college' class='john-jay'>
-            <label for='John Jay College'><img src='images/john-jay.jpg'></label>
-          <input type='radio' name='college' class='ccny'>
-            <label for='CCNY'><img src='images/ccny-logo.png'></label>
-          <input type='radio' name='college' class='lehman'>
-            <label for='Lehman College'><img src='images/lehman.jpg'></label>
-          <input type='radio' name='college' class='staten-island'>
-            <label for='College of Staten Island'><img src='images/staten-island.png'></label>
-          <input type='radio' name='college' class='city-tech'>
-            <label for='City Tech'><img src='images/city-tech.jpg'></label>
-          <input type='radio' name='college' class='brooklyn-college'>
-            <label for='Brooklyn College'><img src='images/brooklyn-college.png'></label>
-          <input type='radio' name='college' class='kingsborough'>
-            <label for='Kingsborough'><img src='images/kcc-logo.png'></label>
-          <input type='radio' name='college' class='laguardia'>
-            <label for='Laguardia College'><img src='images/laguardia-college.gif'></label>
-          <input type='radio' name='college' class='queens'>
-            <label for='Queens College'><img src='images/queens-college.jpg'></label>
-          <input type='radio' name='college' class='queenborough'>
-            <label for='Queenborough College'><img src='images/queenborough.jpg'></label>
-          <input type='radio' name='college' class='bronx'>
-            <label for='Bronx College'><img src='images/bronx-college.jpg'></label>
-          <input type='radio' name='college' class='york'>
-            <label for='York College'><img src='images/york-college.gif'></label>
-          <input type='radio' name='college' class='guttman'>
-            <label for= 'Guttman College'><img src='images/guttman.gif'></label>
-          <input type='radio' name='college' class='hostos'>
-            <label for='Hostos College'><img src='images/hostos-college.png'></label>
-          <input type='radio' name='college' class='medgar-evers'>
-            <label for='Medgar Evers College'><img src='images/medgar-evers.jpg'></label>
-          <input type='radio' name='college' class='baruch'>
-            <label for='Baruch College'><img src='images/baruch-logo.jpg'></label>
-          <input type='radio' name='college' class='cuny-graduate-center'>
-            <label for='CUNY Graduate Center'><img src='images/cuny-graduate.jpg'></label>
-          <input type='radio' name='college' class='cuny-law'>
-            <label for='CUNY school of law'><img src='images/cuny-law.jpg'></label>
-          <input type='radio' name='college' class='cuny-journalism'>
-            <label for='CUNY of Jounalism'><img src='images/cuny-journalism.png'></label>
-          <input type='radio' name='college' class='cuny-health'>
-            <label for='CUNY of public health'><img src='images/cuny-health.png'></label>
-          <input type='radio' name='college' class='macaulay-college'>
-            <label for='Macaulay Honors'><img src='images/mhc-logo.jpg'></label>
-          <input type='radio' name='college' class='cuny-professional'>
-            <label for='CUNY of Professional Studies'><img src='images/cuny-pro.jpg'></label>
+          <input type='radio' name='college'>
+            <label for='Hunter College'><img src='images/hunter.jpg' class='hunter'></label>
+          <input type='radio' name='college'>
+            <label for='BMCC'><img src='images/bmcc.png' class='bmcc'></label>
+          <input type='radio' name='college'>
+            <label for='John Jay College'><img src='images/john-jay.jpg' class='john-jay'></label>
+          <input type='radio' name='college'>
+            <label for='CCNY'><img src='images/ccny-logo.png' class='ccny'></label>
+          <input type='radio' name='college'>
+            <label for='Lehman College'><img src='images/lehman.jpg' class='lehman'></label>
+          <input type='radio' name='college'>
+            <label for='College of Staten Island'><img src='images/staten-island.png' class='staten-island'></label>
+          <input type='radio' name='college'>
+            <label for='City Tech'><img src='images/city-tech.jpg' class='city-tech'></label>
+          <input type='radio' name='college'>
+            <label for='Brooklyn College'><img src='images/brooklyn-college.png' class='brooklyn-college'></label>
+          <input type='radio' name='college'>
+            <label for='Kingsborough'><img src='images/kcc-logo.png' class='kingsborough'></label><br>
+          <input type='radio' name='college'>
+            <label for='Laguardia College'><img src='images/laguardia-college.gif' class='laguardia'></label>
+          <input type='radio' name='college'>
+            <label for='Queens College'><img src='images/queens-college.jpg' class='queens'></label>
+          <input type='radio' name='college'>
+            <label for='Queenborough College'><img src='images/queenborough.jpg' class='queenborough'></label>
+          <input type='radio' name='college'>
+            <label for='Bronx College'><img src='images/bronx-college.jpg' class='bronx'></label>
+          <input type='radio' name='college'>
+            <label for='York College'><img src='images/york-college.gif' class='york'></label>
+          <input type='radio' name='college'>
+            <label for= 'Guttman College'><img src='images/guttman.gif' class='guttman'></label>
+          <input type='radio' name='college'>
+            <label for='Hostos College'><img src='images/hostos-college.png' class='hostos'></label>
+          <input type='radio' name='college'>
+            <label for='Medgar Evers College'><img src='images/medgar-evers.jpg' class='medgar-evers'></label>
+          <input type='radio' name='college'>
+            <label for='Baruch College'><img src='images/baruch-logo.jpg' class='baruch'></label><br>
+          <input type='radio' name='college'>
+            <label for='CUNY Graduate Center'><img src='images/cuny-graduate.jpg' class='cuny-graduate-center'></label>
+          <input type='radio' name='college'>
+            <label for='CUNY school of law'><img src='images/cuny-law.jpg' class='cuny-law'></label>
+          <input type='radio' name='college'>
+            <label for='CUNY of Jounalism'><img src='images/cuny-journalism.png' class='cuny-journalism'></label>
+          <input type='radio' name='college'>
+            <label for='CUNY of public health'><img src='images/cuny-health.png' class='cuny-health'></label>
+          <input type='radio' name='college'>
+            <label for='Macaulay Honors'><img src='images/mhc-logo.jpg' class='macaulay-college'></label>
+          <input type='radio' name='college'>
+            <label for='CUNY of Professional Studies'><img src='images/cuny-pro.jpg' class='cuny-professional'></label>
         </div>
       </ul>
     </div>
-    <input type='submit'>
+    <button>Submit!</button>
     <div id='card'>
       <div id='college'>
-        
+        <img src="input[name='college']:checked" width='400px' height='100px'>
       </div>
-      <div id='name'>
-        Name: <input type='text'>
-      </div>
-      <div id='occupation'>
-        Occupation: <h2></h2>
-      </div>
-      <div id='idnum'>
-        ID Number: <h3></h3>
-      </div>
-      <div id='web'>
-        
-      </div>
-      <div id='color'>
-        
-      </div>
+      <p></p>
+      <h2></h2>
+      <h3></h3>
     </div>
   </div>
 </body>
