@@ -1,73 +1,35 @@
 .container {
-  background-color: lavender;
+  background-color:lightblue;
+  margin:10px;
 }
-
 header {
-  font-size: 48px;
-  text-align: center;
-  background-color: white;
+  font-size:48px;
+  background-color:white;
+  margin:auto;
 }
-
-#college {
-  width: 600px;
-  height: 100px;
-  background-color: lightblue;
-}
-
-#name {
-  width: 50px;
-  height: 50px;
-
-}
-
-text {
-  width: 100px;
-  height: 50px;
-  display: inline-block;
-  text-align: right;
-}
-
-#occupation {
-  width: 100px;
-  height: 50px;
-}
-
-h2 {
-  width: 100px;
-  height: 50px;
-  display: inline-block;
-  text-align: right;
-}
-
-#idnum {
-  width: 150px;
-  height: 50px;
-}
-
-h3 {
-  width: 100px;
-  height: 50px;
-  display: inline-block;
-  text-align: right;
-}
-
-#web {
-  width: 200px;
-  height: 100px;
-  color: black;
-}
-
 #card {
-  width: 600px;
-  height: 400px;
-  background-color: white;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  background-color:white;
+  width:400px;
+  height:300px;
+  margin:auto;
+  border:solid 2px slateblue;
 }
-
-img {
-  width: 100px;
-  height: 100px;
+#img {
+  width:400px;
+  height:200px;
 }
-
+h1 {
+  font-size:24px;
+  display:inline;
+  text-align:center;
+  margin:10px;
+}
+h2 {
+  display:inline;
+}
+h3 {
+  display:inline;
+}
+span {
+  font-size:24px;
+}
